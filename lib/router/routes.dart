@@ -3,7 +3,7 @@ import 'package:admin_dashboard/router/no_page_found_handlers.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
-abstract class AppPages {
+abstract class Routes {
   //root
   static const String ROOTROUTE = '/';
 
@@ -21,8 +21,20 @@ abstract class AppPages {
     GetPage(
       name: ROOTROUTE,
       page: AdminHandlers.login,
-      transition: Transition.noTransition,
-      transitionDuration: 0.milliseconds,
+      transition: Transition.fade,
+      transitionDuration: 250.milliseconds,
+    ),
+    GetPage(
+      name: LOGINROUTE,
+      page: AdminHandlers.login,
+      transition: Transition.fade,
+      transitionDuration: 250.milliseconds,
+    ),
+    GetPage(
+      name: REGISTERROUTE,
+      page: AdminHandlers.register,
+      transition: Transition.fade,
+      transitionDuration: 250.milliseconds,
     ),
   ];
 

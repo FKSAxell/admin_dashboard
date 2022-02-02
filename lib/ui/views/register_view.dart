@@ -2,11 +2,11 @@ import 'package:admin_dashboard/ui/buttons/custom_outlined_button.dart';
 import 'package:admin_dashboard/ui/buttons/link_text.dart';
 import 'package:admin_dashboard/ui/inputs/custom_inputs.dart';
 import 'package:flutter/material.dart';
-import 'package:admin_dashboard/router/routes.dart';
 import 'package:get/get.dart';
+import 'package:admin_dashboard/router/routes.dart';
 
-class LoginView extends StatelessWidget {
-  const LoginView({Key? key}) : super(key: key);
+class RegisterView extends StatelessWidget {
+  const RegisterView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,6 +20,18 @@ class LoginView extends StatelessWidget {
           child: Form(
               child: Column(
             children: [
+              TextFormField(
+                // validator: (value) => ,
+                style: TextStyle(
+                  color: Colors.white,
+                ),
+                decoration: CustomInputs.loginInputDecoration(
+                  hint: "Ingrese su nombre",
+                  label: "Nombre",
+                  icon: Icons.person,
+                ),
+              ),
+              SizedBox(height: 20),
               TextFormField(
                 // validator: (value) => ,
                 style: TextStyle(
@@ -47,12 +59,12 @@ class LoginView extends StatelessWidget {
               SizedBox(height: 20),
               CustomOutlinedButton(
                 onPressed: () {},
-                text: 'Ingresar',
+                text: 'Crear cuenta',
               ),
               SizedBox(height: 20),
               LinkText(
-                text: "Nueva cuenta",
-                onPressed: () => Get.toNamed(Routes.REGISTERROUTE),
+                text: "Ir al login",
+                onPressed: () => Get.toNamed(Routes.LOGINROUTE),
               )
             ],
           )),
