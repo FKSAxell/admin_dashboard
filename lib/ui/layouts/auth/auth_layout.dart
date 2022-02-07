@@ -55,12 +55,11 @@ class _MobileBody extends StatelessWidget {
             height: size.height * 0.70,
             child: child,
           ),
-
-          // Container(
-          //   width: double.infinity,
-          //   height: 400,
-          //   child: BackgroundTwitter(),
-          // )
+          Container(
+            width: double.infinity,
+            height: 400,
+            child: BackgroundTwitter(),
+          )
         ],
       ),
     );
@@ -81,7 +80,7 @@ class _DesktopBody extends StatelessWidget {
       child: Row(
         children: [
           //Twitter Background
-          BackgroundTwitter(),
+          Expanded(child: BackgroundTwitter()),
 
           //View Container
           Container(

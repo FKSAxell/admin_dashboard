@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 class NoPageFoundHandlers {
   static Widget Function() noPageFound = () {
+    print("nofound");
     return NoPageFoundView();
   };
 }

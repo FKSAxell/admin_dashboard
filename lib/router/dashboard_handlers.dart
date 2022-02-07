@@ -7,11 +7,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:admin_dashboard/router/routes.dart';
 
-class AdminHandlers {
-  static Widget Function() login = () {
-    return Obx(() => redirect("") ? LoginView() : DashboardView());
-  };
-  static Widget Function() register = () {
-    return Obx(() => redirect("") ? RegisterView() : DashboardView());
+class DashboardHandlers {
+  static Widget Function() dashboard = () {
+    return Obx(
+        () => redirect(Routes.DASHBOARDROUTE) ? LoginView() : DashboardView());
   };
 }
