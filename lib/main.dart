@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
       initialRoute: "/",
       unknownRoute: Routes.unknownRoute,
       getPages: Routes.pages,
-      // navigatorKey: Get.key,
+      navigatorKey: Get.key,
       initialBinding: MainBinding(),
       builder: (_, child) {
         AuthController authCtrl = Get.find<AuthController>();
