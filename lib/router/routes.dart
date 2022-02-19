@@ -21,10 +21,17 @@ abstract class Routes {
 
   //dashboard
   static const String DASHBOARDROUTE = '/dashboard';
+  static const String ICONSROUTE = '/dashboard/icons';
 
   //No Page Found
   static const String NOPAGEFOUND = "/nopagefound";
-  static List rutas = ['/', '/auth/login', '/auth/register', '/dashboard'];
+  static List rutas = [
+    ROOTROUTE,
+    LOGINROUTE,
+    REGISTERROUTE,
+    DASHBOARDROUTE,
+    ICONSROUTE
+  ];
 
   static final List<GetPage<dynamic>> pages = [
     GetPage(
@@ -44,6 +51,13 @@ abstract class Routes {
     GetPage(
       name: DASHBOARDROUTE,
       page: DashboardHandlers.dashboard,
+      transition: Transition.fade,
+      transitionDuration: 250.milliseconds,
+      // binding: RegisterBinding(),
+    ),
+    GetPage(
+      name: ICONSROUTE,
+      page: DashboardHandlers.icons,
       transition: Transition.fade,
       transitionDuration: 250.milliseconds,
       // binding: RegisterBinding(),
